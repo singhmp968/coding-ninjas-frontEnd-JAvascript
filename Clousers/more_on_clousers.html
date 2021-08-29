@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+		var i = 10;
+		function outer() {
+			var j=20;
+//			console.log(i,j)
+			var inner = function inner() {
+				var k=30;
+				console.log(j,k)
+				k++;
+				j++; 
+			}
+			return inner;
+		}
+	var inner =outer() 
+	inner(); //op 20,30 --->if j++ is present 20,30
+	inner1();//op 20,30 ---> if j++ is present 20,31 
+	// in the above the op is same bacause at every call of inner a new scope is creaed and it get destoryed 
+	// op will 
+</script>
+</body>
+</html>
