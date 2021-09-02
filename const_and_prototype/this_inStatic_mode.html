@@ -9,8 +9,13 @@
 	'use script' 
 	function demo() {
 		console.log(this)
-	}
+	}// if we are calling demo then o/p->will be windows as it will refer to window 
 
+	
+	var demo33 = function demo() {
+		console.log(this)
+	}
+	// if we are calling demo then o/p->will be windows as it will refer to window 
 	function demo2(a,b) {
 		console.log(this)
 		console.log(a,b)
@@ -24,7 +29,7 @@
 	}
 	demo(); // window here if we use 'use strict' then undefined will be the output
 	// if we are calling function in a plan way then the function is not bound to any object  
-	obj.print(); // {...obj}
+	obj.print(); // {...obj} here the out put will be object{} property unlike function demo and demo33
 
 
 	//we can bound a function to an object we acan do tha by call and apply
