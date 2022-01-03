@@ -41,8 +41,9 @@
 		}
 	var inner =outer() 
 	inner(); //op 20,30 --->if j++ is present 20,30
-	inner1();//op 20,30 ---> if j++ is present 20,31 
-	// in the above the op is same bacause at every call of inner a new scope is creaed and it get destoryed 
+	inner();//op 20,30 ---> if j++ is present 20,31 
+	// here we  op is like this beacause when we call outer there is execuation env is created for outer and it will have value of j as 20
+	// in the above the op is same bacause at every call of inner a new scope is creaed and it get destoryed new the outer is returning the inner function and the inner i.e of line 43 will going to preserve the the value of ouetr variables i.e it will acctuall have referance of j here first inner call will be call and compleete its task after that 2ne inner function will be called and it will create fresh inner function and have new value of k but it doesnot have not new value of j i.e outer will be store as reference
 	// op will 
 </script>
 </body>
